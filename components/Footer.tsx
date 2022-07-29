@@ -2,7 +2,7 @@ import { Text } from '@chakra-ui/react'
 
 const Footer = () => {
   return (
-    <Text>Footer</Text>
+    <Text color="gray.400">If you have trouble loading this demo, try refreshing.</Text>
   )
 }
 
