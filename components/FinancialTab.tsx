@@ -15,7 +15,7 @@ const FinancialTab = ({ }: any) => {
       </Wrap>
 
       <Heading marginTop={10}>Loans</Heading>
-      <Text>Below is a list of all loans you've taken out.</Text>
+      <Text>Below is a list of all loans you&apos;ve taken out.</Text>
 
       <Wrap spacing={5} marginTop={5}>
         <Wallet type="Aave" name="" address="Liquidated" balance="0.5 WBTC ($9,1984.33)" />

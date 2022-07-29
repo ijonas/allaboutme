@@ -6,7 +6,7 @@ const SocialTab = ({ profiles }: any) => {
   return (
     <Flex direction="row">
       <Flex direction="column" paddingTop={5} paddingBottom={5} width="75%">
-        <Text>Below is a list of all the social connections you've established across Lens Protocol and Twitter.</Text>
+        <Text>Below is a list of all the social connections you@pos;ve established across Lens Protocol and Twitter.</Text>
         <Flex paddingTop={5} paddingBottom={5}>
           <Wrap>
             {profiles.map((profile: any, index: number) => (<WrapItem key={index}><ProfilePic name={profile.name} url={profile.avatarURL} displayName={true} /></WrapItem>))}

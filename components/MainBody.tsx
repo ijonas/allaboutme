@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Flex, Text, Heading, Tabs, Tab, TabPanels, TabPanel, TabList, Spinner, Center } from '@chakra-ui/react'
-import { useViewerRecord, Provider, RequestClient, useViewerConnection } from '@self.id/framework'
+import { useViewerRecord, Provider, RequestClient, useViewerConnection, BasicProfile, ViewerRecord } from '@self.id/framework'
 import { useFormik } from "formik";
 
 import Profile from "./Profile";
@@ -53,7 +53,12 @@ const MainBody = ({ state }: any) => {
       if (record !== undefined) {
         const payload = { name: values.name, email: values.email }
         console.log("Setting record", payload)
-        await record.merge(payload)
+        if (record !== undefined) {
+          const rec = record as ViewerRecord<BasicProfile>
+          if (rec.merge) {
+            await rec.merge(payload)
+          }
+        }
         setEditMode(false)
       } else {
         console.log("No record")
